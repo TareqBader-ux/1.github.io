@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button style="font-size: 1px; background: transparent; opacity: 0;"></button>
+    <h1 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">Very Game-free Calculator</h1>
+    
+    <input type="text" readonly id="inp">
+    
+    <div class="numb">
+        <!-- Added onclick directly to inputs for dead-simple execution -->
+        <button value="1" onclick="document.getElementById('inp').value += this.value">1</button>
+        <button value="2" onclick="document.getElementById('inp').value += this.value">2</button>
+        <button value="3" onclick="document.getElementById('inp').value += this.value">3</button>
+        <button value="4" onclick="document.getElementById('inp').value += this.value">4</button>
+        <button value="5" onclick="document.getElementById('inp').value += this.value">5</button>
+        <button value="6" onclick="document.getElementById('inp').value += this.value">6</button>
+        <button value="7" onclick="document.getElementById('inp').value += this.value">7</button>
+        <button value="8" onclick="document.getElementById('inp').value += this.value">8</button>
+        <button value="9" onclick="document.getElementById('inp').value += this.value">9</button>
+        <button value="0" onclick="document.getElementById('inp').value += this.value">0</button>
+        
+        <div class="btns">
+            <button value="/" onclick="document.getElementById('inp').value += this.value">/</button>
+            <button value="*" onclick="document.getElementById('inp').value += this.value">x</button>
+            <button value="-" onclick="document.getElementById('inp').value += this.value">-</button>
+            <button value="+" onclick="document.getElementById('inp').value += this.value">+</button>
+            <button onclick="document.getElementById('inp').value = ''">C</button>
+            <button onclick="Calculate()">=</button>
+        </div>
+    </div>
+
+    <script>
+        function Calculate() {
+            let inpElement = document.getElementById("inp");
+            try {
+                // Evaluates the string math inside the input field directly
+                inpElement.value = Function('"use strict";return (' + inpElement.value + ')')();
+            } catch (e) {
+                inpElement.value = "Error";
+            }
+
+                    if (inpElement.value==="1999") {
+                window.location.href = "https://crazygames.com";
+            }  else if (inpElement.value==="1777") {
+                window.location.href = "https://yandex.com/game/";
+            }  else if (inpElement.value==="911") {
+                window.location.href = "https://Tareqbader-ux.github.io/ta.github.io";
+            } 
+        }
+    </script>
+</body>
+</html>
