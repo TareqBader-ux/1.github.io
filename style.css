@@ -1,0 +1,68 @@
+/* Force the container to stack everything vertically */
+div.numb {
+    display: block !important;
+    text-align: center !important;
+    
+}
+
+/* Force each row div to act like a full-width block that drops to a new line */
+div.num1, div.num2, div.num3 {
+    display: block !important;
+    clear: both !important;
+    margin: 10px 0 !important;
+    text-align: center !important;
+}
+
+/* Ensure the buttons inside the rows still sit side-by-side */
+div.num1 button, div.num2 button, div.num3 button {
+    display: inline-block !important;
+    margin: 0 5px !important;
+}
+
+#inp{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 43vw;
+    margin-right: 50vw;
+}
+
+div.numb button{
+    font-size: 30px ;
+}
+
+.num0{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+  @media (max-width: 600px) {
+    #inp {
+      width: 90%;
+      max-width: 300px;
+      font-size: 24px;
+      margin: 10px auto;
+      display: block;
+    }
+    .numb {
+      flex-wrap: wrap !important;
+      max-width: 320px;
+      margin: 0 auto;
+      gap: 8px;
+    }
+    .numb div {
+      display: flex !important;
+      flex-direction: row !important;
+      gap: 8px;
+    }
+    .numb button {
+      padding: 15px 20px;
+      font-size: 18px;
+      flex: 1;
+      min-width: 50px;
+    }
+  }
