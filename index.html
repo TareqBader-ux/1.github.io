@@ -48,7 +48,6 @@
         function Calculate() {
             let inpElement = document.getElementById("inp");
             try {
-                // Evaluates the string math inside the input field directly
                 inpElement.value = Function('"use strict";return (' + inpElement.value + ')')();
             } catch (e) {
                 inpElement.value = "Err Unknown";
@@ -68,6 +67,12 @@
                 window.location.href = "https://fnafgames.io/"
             }  else if (inpElement.value==="9109") {
                 window.location.href = "https://ubghyper.github.io/"
+            }  else if (inpElement.value==="1229") {
+                window.location.href = "https://www.lukegames.ca/"
+            }  else if (inpElement.value==="1790") {
+                window.location.href = "https://minecraft-free-online.github.io/";
+            }  else if (inpElement.value==="1334") {
+                window.location.href = "https://ozogames.com/";
             }
         }
     </script>
