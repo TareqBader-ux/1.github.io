@@ -1,1 +1,1 @@
-# 1.github.io
+let console = ("FUK U");
